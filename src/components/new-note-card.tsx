@@ -4,18 +4,18 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "sonner";
 
 export function NewNoteCard() {
-  const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
+  const [shouldShowOnBoarding, setShouldShowOnBoarding] = useState(true);
   const [content, setContent] = useState("");
 
   function handleStartEditor() {
-    setShouldShowOnboarding(false);
+    setShouldShowOnBoarding(false);
   }
 
   function handleContentChanged(event: ChangeEvent<HTMLTextAreaElement>) {
     setContent(event.target.value);
 
     if (event.target.value === "") {
-      setShouldShowOnboarding(true);
+      setShouldShowOnBoarding(true);
     }
   }
 
@@ -53,7 +53,7 @@ export function NewNoteCard() {
                 Adicionar nota
               </span>
 
-              {shouldShowOnboarding ? (
+              {shouldShowOnBoarding ? (
                 <p className="text-sm leading-6 text-slate-400">
                   Comece{" "}
                   <button className="font-medium text-lime-400 hover:underline">
